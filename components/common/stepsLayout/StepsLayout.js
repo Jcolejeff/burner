@@ -14,12 +14,7 @@ const StepLayout = ({ children }) => {
 				options={{
 					headerStyle: { backgroundColor: COLORS.black },
 					headerShadowVisible: false,
-					// headerLeft: () => (
-					// 	<ScreenHeaderBtn iconUrl={icons.menu} dimension="60%" />
-					// ),
-					// headerRight: () => (
-					// 	<ScreenHeaderBtn iconUrl={images.profile} dimension="100%" />
-					// ),
+					headerLeft: () => <></>,
 					headerTitle: "",
 				}}
 			/>

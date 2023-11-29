@@ -1,7 +1,14 @@
 import React, { useState } from "react";
-import { View, Text, ScrollView, SafeAreaView, Image } from "react-native";
+import {
+	View,
+	Text,
+	ScrollView,
+	SafeAreaView,
+	Image,
+	ImageBackground,
+} from "react-native";
 import { Stack, useRouter } from "expo-router";
-
+import { StatusBar } from "expo-status-bar";
 import { COLORS, icons, images, SIZES } from "../constants";
 import { ScreenHeaderBtn, Welcome } from "../components";
 
@@ -13,28 +20,28 @@ const Home = () => {
 		<SafeAreaView style={{ flex: 1 }}>
 			<Stack.Screen
 				options={{
-					headerStyle: { backgroundColor: COLORS.black },
 					headerShadowVisible: false,
 					// headerLeft: () => (
-					// 	<ScreenHeaderBtn iconUrl={icons.menu} dimension="60%" />
+					// 	<ScreenHeaderBtn iconUrl={icons.spotify} dimension="100%" />
 					// ),
 					// headerRight: () => (
-					// 	<ScreenHeaderBtn iconUrl={images.profile} dimension="100%" />
+					// 	<ScreenHeaderBtn iconUrl={icons.spotify} dimension="100%" />
 					// ),
 					headerTitle: "",
+					headerTransparent: true,
 					headerBackground: () => (
-						<Image
-							source={require("../assets/images/header-bg.png")}
-							style={{
-								flex: 1,
-								resizeMode: "contain",
+						<ImageBackground
+							imageStyle={{
+								resizeMode: "cover",
 								width: "100%",
-								height: "100%",
+								height: 75,
 							}}
+							source={require("../assets/images/header-bg.png")}
 						/>
 					),
 				}}
 			/>
+			<StatusBar style="light" />
 
 			<Welcome />
 		</SafeAreaView>
