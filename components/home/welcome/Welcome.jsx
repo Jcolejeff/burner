@@ -23,30 +23,46 @@ const Welcome = () => {
 				flex: 1,
 
 				backgroundColor: COLORS.black,
-				padding: SIZES.medium,
+
 				justifyContent: "center",
-				gap: SIZES.small,
+				gap: SIZES.large,
 			}}
 		>
 			<Image source={images.home} resizeMode="cover" style={styles.homeImage} />
-			<Text style={styles.heading}>Stay in tune</Text>
-			<Text style={styles.welcomeMessage}>
-				Catch up on releases from your favorite artists. Share new music, spread
-				love
-			</Text>
+			<View
+				style={{
+					backgroundColor: COLORS.black,
+					padding: SIZES.medium,
+					justifyContent: "center",
+					gap: SIZES.small,
+					alignItems: "center",
+				}}
+			>
+				<Text style={styles.heading}>Stay in tune</Text>
+				<Text style={styles.welcomeMessage}>
+					Catch up on releases from your favorite artists. Share new music,
+					spread love
+				</Text>
 
-			<View style={styles.btnContainer}>
-				<TouchableOpacity
-					style={styles.btn}
-					onPress={() => router.push(`/onBoardingSteps/stepOne`)}
-				>
-					<Image
-						source={icons.spotify}
-						resizeMode="contain"
-						style={styles.searchBtnImage}
-					/>
-					<Text style={styles.spotify}>CONTINUE WITH SPOTIFY</Text>
-				</TouchableOpacity>
+				<View style={styles.btnContainer}>
+					<TouchableOpacity
+						style={styles.btn}
+						onPress={() => router.push(`/onBoardingSteps/stepOne`)}
+					>
+						<Image
+							source={icons.spotify}
+							resizeMode="contain"
+							style={styles.searchBtnImage}
+						/>
+						<Text style={styles.spotify}>CONTINUE WITH SPOTIFY</Text>
+					</TouchableOpacity>
+				</View>
+				<View style={{ flexDirection: "row", gap: 2 }}>
+					<Text style={styles.linkText}>
+						By clicking continue, you agree to our
+					</Text>
+					<Text style={styles.link}>Terms of Use</Text>
+				</View>
 			</View>
 
 			{/* <View style={styles.tabsContainer}>
