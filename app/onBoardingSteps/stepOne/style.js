@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 		alignContent: "center",
 		gap: SIZES.small,
-		paddingVertical: SIZES.medium,
+		paddingVertical: SIZES.small,
 	},
 	searchWrapper: {
 		flex: 1,

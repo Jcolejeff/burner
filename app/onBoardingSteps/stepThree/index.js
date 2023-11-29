@@ -51,12 +51,7 @@ const OnBoardingStepThree = () => {
 							style={styles.btn}
 							onPress={() => router.push(`/`)}
 						>
-							<Text style={styles.spotify}>Skip</Text>
-							<Image
-								source={icons.next}
-								resizeMode="cover"
-								style={styles.searchBtnImage}
-							/>
+							<Text style={styles.spotify}>GET STARTED</Text>
 						</TouchableOpacity>
 					</View>
 				</View>

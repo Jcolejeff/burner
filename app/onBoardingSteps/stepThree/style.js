@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
 		marginTop: SIZES["2xlarge"],
 	},
 	btn: {
-		width: "30%",
+		width: "40%",
 		height: "100%",
 		backgroundColor: COLORS.primary,
 		flexDirection: "row",
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 		alignContent: "center",
 		gap: SIZES.small,
-		paddingVertical: SIZES.medium,
+		paddingVertical: SIZES.small,
 	},
 	searchWrapper: {
 		flex: 1,
