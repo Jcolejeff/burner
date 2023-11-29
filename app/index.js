@@ -10,9 +10,7 @@ const Home = () => {
 	const [searchTerm, setSearchTerm] = useState("");
 
 	return (
-		<SafeAreaView
-			style={{ flex: 1, backgroundColor: COLORS.lightWhite, height: "100%" }}
-		>
+		<SafeAreaView style={{ flex: 1 }}>
 			<Stack.Screen
 				options={{
 					headerStyle: { backgroundColor: COLORS.black },
@@ -38,9 +36,7 @@ const Home = () => {
 				}}
 			/>
 
-			<ScrollView showsVerticalScrollIndicator={false}>
-				<Welcome />
-			</ScrollView>
+			<Welcome />
 		</SafeAreaView>
 	);
 };

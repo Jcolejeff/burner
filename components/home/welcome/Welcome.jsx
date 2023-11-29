@@ -26,8 +26,6 @@ const Welcome = () => {
 				padding: SIZES.medium,
 				justifyContent: "center",
 				gap: SIZES.small,
-
-				minHeight: 770,
 			}}
 		>
 			<Image source={images.home} resizeMode="cover" style={styles.homeImage} />

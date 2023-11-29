@@ -28,8 +28,6 @@ const OnBoardingStepOne = () => {
 					padding: SIZES.medium,
 					justifyContent: "center",
 					gap: SIZES.small,
-
-					minHeight: 770,
 				}}
 			>
 				<Image

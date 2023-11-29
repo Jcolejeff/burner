@@ -9,9 +9,7 @@ const StepLayout = ({ children }) => {
 	const [searchTerm, setSearchTerm] = useState("");
 
 	return (
-		<SafeAreaView
-			style={{ flex: 1, backgroundColor: COLORS.lightWhite, height: "100%" }}
-		>
+		<SafeAreaView style={{ flex: 1 }}>
 			<Stack.Screen
 				options={{
 					headerStyle: { backgroundColor: COLORS.black },
@@ -26,7 +24,7 @@ const StepLayout = ({ children }) => {
 				}}
 			/>
 
-			<ScrollView showsVerticalScrollIndicator={false}>{children}</ScrollView>
+			{children}
 		</SafeAreaView>
 	);
 };
