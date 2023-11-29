@@ -51,7 +51,7 @@ const OnBoardingStepThree = () => {
 							style={styles.btn}
 							onPress={() => router.push(`/`)}
 						>
-							<Text style={styles.spotify}>GET STARTED</Text>
+							<Text style={styles.spotify}>Get Started</Text>
 						</TouchableOpacity>
 					</View>
 				</View>

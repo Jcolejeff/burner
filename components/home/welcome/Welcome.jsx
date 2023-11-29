@@ -97,7 +97,7 @@ const Welcome = () => {
 								style={styles.modalBtn}
 								onPress={() => {
 									setIsModalVisible(false);
-									router.push("/onBoardingSteps/stepOne");
+									router.push("/onBoardingSteps");
 								}}
 							>
 								<Text style={styles.btnText}>Open</Text>

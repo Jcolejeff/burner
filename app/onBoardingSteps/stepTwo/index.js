@@ -48,7 +48,7 @@ const OnBoardingStepTwo = () => {
 						<Image source={icons.sliderTwo} resizeMode="contain" style={{}} />
 						<TouchableOpacity
 							style={styles.btn}
-							onPress={() => router.push(`/onBoardingSteps/stepThree`)}
+							onPress={() => router.push(`/`)}
 						>
 							<Text style={styles.spotify}>Skip</Text>
 							<Image
