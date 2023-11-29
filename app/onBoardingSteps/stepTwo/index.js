@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { useRouter } from "expo-router";
 
-import styles from "./welcome.style";
+import styles from "./style";
 import { SIZES, icons, COLORS, images } from "../../../constants";
 import StepLayout from "../../../components/common/stepsLayout/StepsLayout";
 
