@@ -11,7 +11,7 @@ import { useRouter } from "expo-router";
 
 import styles from "./welcome.style";
 import { SIZES, icons, COLORS, images } from "../../../constants";
-import { StepLayout } from "../../../components";
+import StepLayout from "../../../components/common/stepsLayout/StepsLayout";
 
 const jobTypes = ["Full-time", "Part-time", "Contract"];
 
@@ -33,7 +33,7 @@ const OnBoardingStepOne = () => {
 				}}
 			>
 				<Image
-					source={images.home}
+					source={images.stepOne}
 					resizeMode="cover"
 					style={styles.homeImage}
 				/>
