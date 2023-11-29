@@ -6,6 +6,8 @@ import {
 	FlatList,
 	TextInput,
 	Image,
+	Modal,
+	SafeAreaView,
 } from "react-native";
 import { useRouter } from "expo-router";
 
@@ -16,6 +18,7 @@ const jobTypes = ["Full-time", "Part-time", "Contract"];
 
 const Welcome = () => {
 	const router = useRouter();
+	const [isModalVisible, setIsModalVisible] = useState(false);
 
 	return (
 		<View
@@ -47,7 +50,7 @@ const Welcome = () => {
 				<View style={styles.btnContainer}>
 					<TouchableOpacity
 						style={styles.btn}
-						onPress={() => router.push(`/onBoardingSteps/stepOne`)}
+						onPress={() => setIsModalVisible(true)}
 					>
 						<Image
 							source={icons.spotify}
@@ -64,6 +67,45 @@ const Welcome = () => {
 					<Text style={styles.link}>Terms of Use</Text>
 				</View>
 			</View>
+			<Modal
+				animationType="slide"
+				transparent={true}
+				visible={isModalVisible}
+				onRequestClose={() => setIsModalVisible(false)}
+			>
+				<SafeAreaView
+					style={{
+						flex: 1,
+						backgroundColor: "#1818179E",
+						padding: 60,
+						justifyContent: "center",
+						alignItems: "center",
+					}}
+				>
+					<View style={styles.modalWrapper}>
+						<Text style={styles.modalHeaderText}>
+							“Burner” wants to open “Spotify”
+						</Text>
+						<View style={styles.modalBtnContainer}>
+							<TouchableOpacity
+								style={styles.modalBtn}
+								onPress={() => setIsModalVisible(false)}
+							>
+								<Text style={styles.btnText}>Close</Text>
+							</TouchableOpacity>
+							<TouchableOpacity
+								style={styles.modalBtn}
+								onPress={() => {
+									setIsModalVisible(false);
+									router.push("/onBoardingSteps/stepOne");
+								}}
+							>
+								<Text style={styles.btnText}>Open</Text>
+							</TouchableOpacity>
+						</View>
+					</View>
+				</SafeAreaView>
+			</Modal>
 		</View>
 	);
 };

@@ -93,6 +93,43 @@ const styles = StyleSheet.create({
 		borderWidth: 1,
 		borderColor: activeJobType === item ? COLORS.secondary : COLORS.gray2,
 	}),
+	modalWrapper: {
+		backgroundColor: COLORS.gray,
+		width: "100%",
+
+		paddingVertical: SIZES.medium,
+		borderRadius: SIZES.medium,
+	},
+	modalBtn: {
+		flexDirection: "row",
+		borderRadius: SIZES["2xlarge"],
+		justifyContent: "center",
+		alignItems: "center",
+		borderRightColor: COLORS.gray2,
+		borderRightWidth: 1,
+	},
+	modalBtnContainer: {
+		justifyContent: "space-around",
+		alignItems: "center",
+		flexDirection: "row",
+		marginTop: SIZES.large,
+	},
+	modalHeaderText: {
+		fontFamily: FONT.bold,
+		fontSize: SIZES.medium,
+		color: COLORS.black,
+		textAlign: "center",
+		marginTop: SIZES.small,
+		paddingBottom: SIZES.medium,
+		paddingHorizontal: SIZES.medium,
+		borderBottomWidth: 1,
+		borderBottomColor: COLORS.gray2,
+	},
+	btnText: {
+		fontFamily: FONT.regular,
+		fontSize: SIZES.medium,
+		color: COLORS.secondary,
+	},
 	tabText: (activeJobType, item) => ({
 		fontFamily: FONT.medium,
 		color: activeJobType === item ? COLORS.secondary : COLORS.gray2,
