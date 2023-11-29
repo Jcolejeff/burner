@@ -1,65 +1,77 @@
-import React, { useState } from 'react'
-import { 
-  View, 
-  Text,
-  TouchableOpacity,
-  FlatList,
-TextInput,
-Image, } from 'react-native'
-import { useRouter } from 'expo-router'
+import React, { useState } from "react";
+import {
+	View,
+	Text,
+	TouchableOpacity,
+	FlatList,
+	TextInput,
+	Image,
+} from "react-native";
+import { useRouter } from "expo-router";
 
-import styles from './welcome.style'
-import { SIZES, icons } from '../../../constants'
+import styles from "./welcome.style";
+import { SIZES, icons, COLORS, images } from "../../../constants";
 
-const jobTypes = [ 'Full-time', 'Part-time', 'Contract' ]
+const jobTypes = ["Full-time", "Part-time", "Contract"];
 
-const Welcome = ({ searchTerm, setSearchTerm, handClick }) => {
-  const router = useRouter()
-  const [activeJobType, setactiveJobType] = useState('Full-time')
+const Welcome = () => {
+	const router = useRouter();
 
-  return (
-    <View>
-      <View style={styles.container}>
-        <Text style={styles.userName}> Hello Iysah!</Text>
-        <Text style={styles.welcomeMessage}> Find your perfect Job today</Text>
-      </View>
+	return (
+		<View
+			style={{
+				flex: 1,
 
-      <View style={styles.searchContainer}>
-        <View style={styles.searchWrapper}>
-          <TextInput 
-          style={styles.searchInput}
-          value={searchTerm}
-          onChangeText={ (text) => setSearchTerm(text)}
-          placeholder='What are you Looking for?' />
-        </View>
+				backgroundColor: COLORS.black,
+				padding: SIZES.medium,
+				justifyContent: "center",
+				gap: SIZES.small,
 
-        <TouchableOpacity style={styles.searchBtn} onPress={handClick}>
-          <Image source={icons.search} 
-          resizeMode='contain'
-          style={styles.searchBtnImage} />
-        </TouchableOpacity>
-      </View>
+				minHeight: 770,
+			}}
+		>
+			<Image source={images.home} resizeMode="cover" style={styles.homeImage} />
+			<Text style={styles.heading}>Stay in tune</Text>
+			<Text style={styles.welcomeMessage}>
+				Catch up on releases from your favorite artists. Share new music, spread
+				love
+			</Text>
 
-      <View style={styles.tabsContainer}>
-        <FlatList 
-        data={jobTypes}
-        renderItem={({ item }) => (
-          <TouchableOpacity 
-          style={styles.tab(activeJobType, item)}
-          onPress={() => { 
-            setactiveJobType(item);
-            router.push(`/search/${item}`)
-          }}
-          >
-            <Text style={styles.tabText(activeJobType, item)}>{item}</Text>
-          </TouchableOpacity>
-        )}
-        keyExtractor={item => item }
-        contentContainerStyle={{ columnGap: SIZES.small}}
-        horizontal/>
-      </View>
-    </View>
-  )
-}
+			<View style={styles.btnContainer}>
+				<TouchableOpacity
+					style={styles.btn}
+					onPress={() => router.push(`/onBoardingSteps/stepOne`)}
+				>
+					<Image
+						source={icons.spotify}
+						resizeMode="contain"
+						style={styles.searchBtnImage}
+					/>
+					<Text style={styles.spotify}>CONTINUE WITH SPOTIFY</Text>
+				</TouchableOpacity>
+			</View>
 
-export default Welcome
+			{/* <View style={styles.tabsContainer}>
+				<FlatList
+					data={jobTypes}
+					renderItem={({ item }) => (
+						<TouchableOpacity
+							style={styles.tab(activeJobType, item)}
+							onPress={() => {
+								setactiveJobType(item);
+								router.push(`/search/${item}`);
+							}}
+						>
+							<Text style={styles.tabText(activeJobType, item)}>{item}</Text>
+						</TouchableOpacity>
+					)}
+					keyExtractor={(item) => item}
+					contentContainerStyle={{ columnGap: SIZES.small }}
+					horizontal
+				/>
+			</View> */}
+		</View>
+	);
+};
+
+export default Welcome;
