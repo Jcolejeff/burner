@@ -107,6 +107,7 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 		borderRightColor: COLORS.gray2,
 		borderRightWidth: 1,
+		width: "50%",
 	},
 	modalBtnContainer: {
 		justifyContent: "space-around",
