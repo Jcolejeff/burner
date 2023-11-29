@@ -25,52 +25,46 @@ const OnBoardingStepThree = () => {
 					flex: 1,
 
 					backgroundColor: COLORS.black,
-					padding: SIZES.medium,
-					justifyContent: "center",
-					gap: SIZES.small,
+
+					justifyContent: "space-between",
+					gap: SIZES.large,
 				}}
 			>
+				<View
+					style={{
+						backgroundColor: COLORS.black,
+						padding: SIZES.medium,
+						justifyContent: "center",
+						gap: SIZES.small,
+					}}
+				>
+					<Text style={styles.heading}>
+						Discover new releases from your favorites
+					</Text>
+					<Text style={styles.welcomeMessage}>
+						Unearth fresh tunes from your favourite artists.
+					</Text>
+
+					<View style={styles.btnContainer}>
+						<Image source={icons.sliderThree} resizeMode="contain" style={{}} />
+						<TouchableOpacity
+							style={styles.btn}
+							onPress={() => router.push(`/`)}
+						>
+							<Text style={styles.spotify}>Skip</Text>
+							<Image
+								source={icons.next}
+								resizeMode="cover"
+								style={styles.searchBtnImage}
+							/>
+						</TouchableOpacity>
+					</View>
+				</View>
 				<Image
-					source={images.home}
+					source={images.stepThree}
 					resizeMode="cover"
 					style={styles.homeImage}
 				/>
-				<Text style={styles.heading}>Stay in tune</Text>
-				<Text style={styles.welcomeMessage}>
-					Catch up on releases from your favorite artists. Share new music,
-					spread love
-				</Text>
-
-				<View style={styles.btnContainer}>
-					<TouchableOpacity style={styles.btn} onPress={() => router.push(`/`)}>
-						<Image
-							source={icons.spotify}
-							resizeMode="contain"
-							style={styles.searchBtnImage}
-						/>
-						<Text style={styles.spotify}>Go to home</Text>
-					</TouchableOpacity>
-				</View>
-
-				{/* <View style={styles.tabsContainer}>
-				<FlatList
-					data={jobTypes}
-					renderItem={({ item }) => (
-						<TouchableOpacity
-							style={styles.tab(activeJobType, item)}
-							onPress={() => {
-								setactiveJobType(item);
-								router.push(`/search/${item}`);
-							}}
-						>
-							<Text style={styles.tabText(activeJobType, item)}>{item}</Text>
-						</TouchableOpacity>
-					)}
-					keyExtractor={(item) => item}
-					contentContainerStyle={{ columnGap: SIZES.small }}
-					horizontal
-				/>
-			</View> */}
 			</View>
 		</StepLayout>
 	);

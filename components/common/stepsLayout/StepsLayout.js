@@ -9,7 +9,7 @@ const StepLayout = ({ children }) => {
 	const [searchTerm, setSearchTerm] = useState("");
 
 	return (
-		<SafeAreaView style={{ flex: 1 }}>
+		<SafeAreaView style={{ flex: 1, backgroundColor: COLORS.black }}>
 			<Stack.Screen
 				options={{
 					headerStyle: { backgroundColor: COLORS.black },

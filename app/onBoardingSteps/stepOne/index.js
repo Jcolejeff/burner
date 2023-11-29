@@ -25,55 +25,44 @@ const OnBoardingStepOne = () => {
 					flex: 1,
 
 					backgroundColor: COLORS.black,
-					padding: SIZES.medium,
-					justifyContent: "center",
-					gap: SIZES.small,
+
+					justifyContent: "space-between",
+					gap: SIZES.large,
 				}}
 			>
+				<View
+					style={{
+						backgroundColor: COLORS.black,
+						padding: SIZES.medium,
+						justifyContent: "center",
+						gap: SIZES.small,
+					}}
+				>
+					<Text style={styles.heading}>Maintain your spotify connection</Text>
+					<Text style={styles.welcomeMessage}>
+						Uninterrupted access to your playlists and favorite tracks.
+					</Text>
+
+					<View style={styles.btnContainer}>
+						<Image source={icons.sliderOne} resizeMode="contain" style={{}} />
+						<TouchableOpacity
+							style={styles.btn}
+							onPress={() => router.push(`/onBoardingSteps/stepTwo`)}
+						>
+							<Text style={styles.spotify}>Skip</Text>
+							<Image
+								source={icons.next}
+								resizeMode="cover"
+								style={styles.searchBtnImage}
+							/>
+						</TouchableOpacity>
+					</View>
+				</View>
 				<Image
 					source={images.stepOne}
 					resizeMode="cover"
 					style={styles.homeImage}
 				/>
-				<Text style={styles.heading}>Stay in tune</Text>
-				<Text style={styles.welcomeMessage}>
-					Catch up on releases from your favorite artists. Share new music,
-					spread love
-				</Text>
-
-				<View style={styles.btnContainer}>
-					<TouchableOpacity
-						style={styles.btn}
-						onPress={() => router.push(`/onBoardingSteps/stepTwo`)}
-					>
-						<Image
-							source={icons.spotify}
-							resizeMode="contain"
-							style={styles.searchBtnImage}
-						/>
-						<Text style={styles.spotify}>Go to step two</Text>
-					</TouchableOpacity>
-				</View>
-
-				{/* <View style={styles.tabsContainer}>
-				<FlatList
-					data={jobTypes}
-					renderItem={({ item }) => (
-						<TouchableOpacity
-							style={styles.tab(activeJobType, item)}
-							onPress={() => {
-								setactiveJobType(item);
-								router.push(`/search/${item}`);
-							}}
-						>
-							<Text style={styles.tabText(activeJobType, item)}>{item}</Text>
-						</TouchableOpacity>
-					)}
-					keyExtractor={(item) => item}
-					contentContainerStyle={{ columnGap: SIZES.small }}
-					horizontal
-				/>
-			</View> */}
 			</View>
 		</StepLayout>
 	);

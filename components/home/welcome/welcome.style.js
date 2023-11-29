@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
 	homeImage: {
 		width: "100%",
 		height: "50%",
+		resizeMode: "cover",
 	},
 	spotify: {
 		fontFamily: FONT.bold,
