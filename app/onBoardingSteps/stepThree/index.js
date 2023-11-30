@@ -46,7 +46,11 @@ const OnBoardingStepThree = () => {
 					</Text>
 
 					<View style={styles.btnContainer}>
-						<Image source={icons.sliderThree} resizeMode="contain" style={{}} />
+						<Image
+							source={icons.sliderThree}
+							resizeMode="contain"
+							style={{ width: "16%", height: "20%" }}
+						/>
 						<TouchableOpacity
 							style={styles.btn}
 							onPress={() => router.push(`/`)}
