@@ -1,19 +1,9 @@
-import React, { useState } from "react";
-import {
-	View,
-	Text,
-	TouchableOpacity,
-	FlatList,
-	TextInput,
-	Image,
-} from "react-native";
+import React from "react";
+import { View, Text, TouchableOpacity, Image } from "react-native";
 import { useRouter } from "expo-router";
-
 import styles from "./style";
 import { SIZES, icons, COLORS, images } from "../../../constants";
 import StepLayout from "../../../components/common/stepsLayout/StepsLayout";
-
-const jobTypes = ["Full-time", "Part-time", "Contract"];
 
 const OnBoardingStepTwo = () => {
 	const router = useRouter();

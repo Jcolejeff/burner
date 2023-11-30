@@ -1,10 +1,9 @@
 import React from "react";
-import { Text, Dimensions, StyleSheet, View } from "react-native";
+import { Dimensions, StyleSheet, View } from "react-native";
 import { SwiperFlatList } from "react-native-swiper-flatlist";
 import OnBoardingStepOne from "./stepOne";
 import OnBoardingStepThree from "./stepThree";
 import OnBoardingStepTwo from "./stepTwo";
-const colors = ["tomato", "thistle", "skyblue", "teal"];
 
 const onBoardingSteps = () => (
 	<SwiperFlatList
@@ -27,6 +26,7 @@ const onBoardingSteps = () => (
 );
 
 const { width } = Dimensions.get("window");
+
 const styles = StyleSheet.create({
 	child: { width, justifyContent: "center" },
 });

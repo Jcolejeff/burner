@@ -14,8 +14,6 @@ import { useRouter } from "expo-router";
 import styles from "./welcome.style";
 import { SIZES, icons, COLORS, images } from "../../../constants";
 
-const jobTypes = ["Full-time", "Part-time", "Contract"];
-
 const Welcome = () => {
 	const router = useRouter();
 	const [isModalVisible, setIsModalVisible] = useState(false);
@@ -24,9 +22,7 @@ const Welcome = () => {
 		<View
 			style={{
 				flex: 1,
-
 				backgroundColor: COLORS.black,
-
 				justifyContent: "center",
 				gap: SIZES.large,
 			}}

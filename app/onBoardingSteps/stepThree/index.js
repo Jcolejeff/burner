@@ -1,7 +1,6 @@
 import React from "react";
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import { useRouter } from "expo-router";
-
 import styles from "./style";
 import { SIZES, icons, COLORS, images } from "../../../constants";
 import StepLayout from "../../../components/common/stepsLayout/StepsLayout";
