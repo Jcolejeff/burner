@@ -6,17 +6,17 @@ const styles = StyleSheet.create({
 	container: {
 		width: "100%",
 	},
-	homeImage: {
+	image: {
 		width: "100%",
 		height: "50%",
 		resizeMode: "cover",
 	},
-	spotify: {
+	btnText: {
 		fontFamily: FONT.regular,
 		fontSize: SIZES.medium,
 		color: COLORS.white,
 	},
-	welcomeMessage: {
+	text: {
 		fontFamily: FONT.regular,
 		fontSize: SIZES.medium,
 		color: COLORS.lightWhite,
@@ -65,41 +65,10 @@ const styles = StyleSheet.create({
 		gap: SIZES.small,
 		paddingVertical: SIZES.small,
 	},
-	searchWrapper: {
-		flex: 1,
-		backgroundColor: COLORS.white,
-		marginRight: SIZES.small,
-		justifyContent: "center",
-		alignItems: "center",
-		borderRadius: SIZES.medium,
-		height: "100%",
-	},
-	searchInput: {
-		fontFamily: FONT.regular,
-		width: "100%",
-		height: "100%",
-		paddingHorizontal: SIZES.medium,
-	},
-
-	searchBtnImage: {
+	btnImage: {
 		width: "10%",
 		height: "100%",
 	},
-	tabsContainer: {
-		width: "100%",
-		marginTop: SIZES.medium,
-	},
-	tab: (activeJobType, item) => ({
-		paddingVertical: SIZES.small / 2,
-		paddingHorizontal: SIZES.small,
-		borderRadius: SIZES.medium,
-		borderWidth: 1,
-		borderColor: activeJobType === item ? COLORS.secondary : COLORS.gray2,
-	}),
-	tabText: (activeJobType, item) => ({
-		fontFamily: FONT.medium,
-		color: activeJobType === item ? COLORS.secondary : COLORS.gray2,
-	}),
 });
 
 export default styles;
