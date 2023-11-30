@@ -23,9 +23,7 @@ const OnBoardingStepTwo = () => {
 			<View
 				style={{
 					flex: 1,
-
 					backgroundColor: COLORS.black,
-
 					justifyContent: "space-between",
 					gap: SIZES.large,
 				}}
@@ -39,7 +37,7 @@ const OnBoardingStepTwo = () => {
 					}}
 				>
 					<Text style={styles.heading}>Smooth playback controls</Text>
-					<Text style={styles.welcomeMessage}>
+					<Text style={styles.text}>
 						Play, pause, skip, and adjust volume effortlessly. Stay in charge of
 						your tunes!
 					</Text>
@@ -54,11 +52,11 @@ const OnBoardingStepTwo = () => {
 							style={styles.btn}
 							onPress={() => router.push(`/`)}
 						>
-							<Text style={styles.spotify}>Skip</Text>
+							<Text style={styles.btnText}>Skip</Text>
 							<Image
 								source={icons.next}
 								resizeMode="cover"
-								style={styles.searchBtnImage}
+								style={styles.btnImage}
 							/>
 						</TouchableOpacity>
 					</View>
@@ -66,7 +64,7 @@ const OnBoardingStepTwo = () => {
 				<Image
 					source={images.stepTwo}
 					resizeMode="cover"
-					style={styles.homeImage}
+					style={styles.image}
 				/>
 			</View>
 		</StepLayout>

@@ -1,19 +1,10 @@
-import React, { useState } from "react";
-import {
-	View,
-	Text,
-	TouchableOpacity,
-	FlatList,
-	TextInput,
-	Image,
-} from "react-native";
+import React from "react";
+import { View, Text, TouchableOpacity, Image } from "react-native";
 import { useRouter } from "expo-router";
 
 import styles from "./style";
 import { SIZES, icons, COLORS, images } from "../../../constants";
 import StepLayout from "../../../components/common/stepsLayout/StepsLayout";
-
-const jobTypes = ["Full-time", "Part-time", "Contract"];
 
 const OnBoardingStepThree = () => {
 	const router = useRouter();
@@ -23,9 +14,7 @@ const OnBoardingStepThree = () => {
 			<View
 				style={{
 					flex: 1,
-
 					backgroundColor: COLORS.black,
-
 					justifyContent: "space-between",
 					gap: SIZES.large,
 				}}
@@ -41,7 +30,7 @@ const OnBoardingStepThree = () => {
 					<Text style={styles.heading}>
 						Discover new releases from your favorites
 					</Text>
-					<Text style={styles.welcomeMessage}>
+					<Text style={styles.text}>
 						Unearth fresh tunes from your favourite artists.
 					</Text>
 
@@ -55,14 +44,14 @@ const OnBoardingStepThree = () => {
 							style={styles.btn}
 							onPress={() => router.push(`/`)}
 						>
-							<Text style={styles.spotify}>Get Started</Text>
+							<Text style={styles.btnText}>Get Started</Text>
 						</TouchableOpacity>
 					</View>
 				</View>
 				<Image
 					source={images.stepThree}
 					resizeMode="cover"
-					style={styles.homeImage}
+					style={styles.image}
 				/>
 			</View>
 		</StepLayout>

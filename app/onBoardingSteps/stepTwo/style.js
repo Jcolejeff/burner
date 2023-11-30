@@ -6,17 +6,17 @@ const styles = StyleSheet.create({
 	container: {
 		width: "100%",
 	},
-	homeImage: {
+	image: {
 		width: "100%",
 		height: "50%",
 		resizeMode: "cover",
 	},
-	spotify: {
+	btnText: {
 		fontFamily: FONT.regular,
 		fontSize: SIZES.medium,
 		color: COLORS.white,
 	},
-	welcomeMessage: {
+	text: {
 		fontFamily: FONT.regular,
 		fontSize: SIZES.medium,
 		color: COLORS.lightWhite,
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
 		gap: SIZES.small,
 		paddingVertical: SIZES.small,
 	},
-	searchBtnImage: {
+	btnImage: {
 		width: "10%",
 		height: "100%",
 	},
