@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
 		fontSize: SIZES.medium,
 		color: COLORS.lightWhite,
 		textAlign: "center",
+		maxWidth: "85%",
 	},
 	linkText: {
 		fontFamily: FONT.regular,
