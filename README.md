@@ -9,16 +9,23 @@
 
 ## Introduction
 
+Burner is a mobile app that allows users to listen to new releases from their favorite artists. Users can also search for artists and add them to their favorites list. The app is built with React Native and uses the Spotify API to fetch artist data and play music.
+
 ## Features
 
-- _Save to Gallery_: Save your sticker creations to your device's gallery for later use.
+- Search for artists
+- Add artists to favorites list
+- Listen to new releases from favorite artists
+- Play music
+- Pause music
+- Skip to next track
 
 ## Installation
 
 1. Clone the repository to your local machine using the following command:
 
 bash
-git clone [Burneer](https://github.com/Iysah/job-search-app-reactnative.git)
+git clone [Burner](https://github.com/Jcolejeff/burner.git)
 
 2. Navigate to the project directory:
 
@@ -37,10 +44,10 @@ npm start
 
 ## Contributing
 
-We welcome contributions to [Job Search]! If you find any issues or have suggestions for improvement, please feel free to open an issue or submit a pull request. Your help is invaluable in making this app even better.
+i welcome contributions to [Burner]! If you find any issues or have suggestions for improvement, please feel free to open an issue or submit a pull request. Your help is invaluable in making this app even better.
 
 ## Contact
 
-If you have any questions or need support, please don't hesitate to contact us:
+If you have any questions or need support, please don't hesitate to contact me! You can email me at `:
 
 - Email: ikwuhjeffery@gmail.com
